@@ -4,11 +4,6 @@ import Data.Function
 
 stringToInt x = read x ::Int 
 
-splitEvery _ [] = []
-splitEvery n list = first : (splitEvery n rest)
-  where
-    (first,rest) = splitAt n list
-
 splitOn:: (Eq a)=> a -> [a] -> [[a]]
 splitOn _ [] = []
 splitOn a l@(x:xs)
